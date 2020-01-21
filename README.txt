@@ -2,7 +2,7 @@ Foram disponibilizados os seguintes documentos:
 
 1 - Referente ao cenário solicitado no exercício 1, segue arquivo Cadastro.docx;
 
-2- Referente à automação de testes solicitada no documento 2, foram disponibilizados os arquivos teste.js e o arquivo package.json, 
+2- Referente à automação de testes solicitada no documento 2, foram disponibilizados os arquivos: teste.js, testenovo.json e o arquivo package.json, 
 bem como um gif com a demonstração da execução do mesmo.
 No package foi configurado: "testenovo": "codeceptjs run --config ./codecept-conf/testenovo/testenovo.json --reporter mocha-multi --grep \"@TESTENOVO\""
 Foi utilizado para execução o seguinte comando: npm run testenovo

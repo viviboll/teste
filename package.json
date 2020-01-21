@@ -1,0 +1,38 @@
+{
+  "name": "teste",
+  "version": "1.5.4",
+  "description": "teste",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "atualizar": "gulp atualiza && npm install",
+    "postinstall": "npm install -g selenium-standalone && selenium-standalone install",
+    "eslint": "eslint .",
+    "firefox": "codeceptjs run-multiple geral:firefox --reporter mocha-multi",
+    "ie": "codeceptjs run-multiple geral:\"internet explorer\" --reporter mocha-multi",
+    "chrome": "codeceptjs run-multiple geral:chrome --reporter mocha-multi",
+    "edge": "codeceptjs run-multiple geral:MicrosoftEdge --reporter mocha-multi",
+ 
+    "testenovo": "codeceptjs run --config ./codecept-conf/testenovo/testenovo.json --reporter mocha-multi --grep \"@TESTENOVO\""
+    
+  },
+  "author": "Viviane Boll",
+  "license": "ISC",
+  "dependencies": {
+    "arr-diff": "^4.0.0",
+    "codeceptjs": "^1.4.3",
+    "filesystem": "^1.0.1",
+    "mocha": "^3.2.0",
+    "mocha-junit-reporter": "^1.18.0",
+    "mocha-multi": "^1.0.1",
+    "mochawesome": "^3.0.3",
+    "moment": "^2.22.2",
+    "pg": "^7.5.0",
+    "shelljs": "^0.7.7",
+    "simple-assert": "^1.0.0",
+    "sync-request": "^4.1.0",
+    "webdriverio": "^4.13.2",
+    "unirest": "0.5.1"
+  }
+ 
+}
