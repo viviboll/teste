@@ -1,0 +1,92 @@
+{
+  "output": "./output",
+  "helpers": {
+    "WebDriverIO": {
+      "url": "http://www.google.com.br",
+      "smartWait": 10000,
+      "waitForTimeout": 10000,
+      "browser": "firefox",
+      "keepCookies": true,
+      "keepBrowserState": true,
+      "restart": false,
+      "windowSize": "maximize",
+      "desiredCapabilities": {
+        "acceptSslCerts": true,
+        "javascriptEnabled": true,
+        "acceptInsecureCerts": true,
+        "chrome": {
+          "browserName": "chrome",
+          "name": "TEST_CHROME",
+          "platform": "ANY",
+          "version": "55.0"
+        },
+        "internet explorer": {
+          "browserName": "internet explorer",
+          "name": "TEST_IE",
+          "platform": "ANY",
+          "ignoreZoomSetting": true,
+          "nativeEvents": false,
+          "version": "11"
+        },
+        "firefox": {
+          "browserName": "firefox",
+          "name": "TEST_FIREFOX",
+          "platform": "ANY",
+          "version": "51.0"
+        },
+        "MicrosoftEdge": {
+          "browserName": "MicrosoftEdge",
+          "name": "TEST_IEEdge",
+          "platform": "Windows 10",
+          "version": "13",
+          "javascriptEnabled": true
+        }
+      }
+    },
+    "CustomHelper": {
+      "require": "../../custom_helper.js"
+    },
+    "FileSystem": {
+      "require": "../../node_modules/codeceptjs/lib/helper/FileSystem.js"
+    }
+  },
+  "multiple": {
+    "geral": {
+      "browsers": [
+        "chrome",
+        "firefox",
+        "internet explorer",
+        "MicrosoftEdge"
+      ]
+    }
+  },
+  "mocha": {
+    "reporterOptions": {
+      "codeceptjs-cli-reporter": {
+        "stdout": "-",
+        "options": {
+          "verbose": true,
+          "debug": true,
+          "steps": true
+        }
+      },
+      "mocha-junit-reporter": {
+        "stdout": "-",
+        "options": {
+          "mochaFile": "./output/result-testenovo.xml"
+        }
+      },
+      "mochawesome": {
+        "stdout": "./output/testenovo/console.log",
+        "options": {
+          "reportDir": "./output/testenovo/",
+          "reportFilename": "mochawesome"
+        }
+      }
+    }
+  },
+  "bootstrap": false,
+  "hooks": [],
+  "tests": "../../tests/testenovo/*.js",
+  "timeout": 10000
+}
